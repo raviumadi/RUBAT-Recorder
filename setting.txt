@@ -1,0 +1,4 @@
+cd docs
+bundle exec jekyll serve --livereload
+
+To start building locally. Ensure all necessary plugins and Gems are listed in the Gemfile.

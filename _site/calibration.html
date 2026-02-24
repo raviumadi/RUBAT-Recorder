@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Calibrating Your Mics | RUBAT Studio</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Calibrating Your Mics" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A unified acquisition platform for high-sample-rate multichannel bioacoustics." />
+<meta property="og:description" content="A unified acquisition platform for high-sample-rate multichannel bioacoustics." />
+<link rel="canonical" href="http://localhost:4000/RUBAT-Recorder/calibration" />
+<meta property="og:url" content="http://localhost:4000/RUBAT-Recorder/calibration" />
+<meta property="og:site_name" content="RUBAT Studio" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Calibrating Your Mics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"A unified acquisition platform for high-sample-rate multichannel bioacoustics.","headline":"Calibrating Your Mics","url":"http://localhost:4000/RUBAT-Recorder/calibration"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/RUBAT-Recorder/assets/css/style.css?v=29fa62d69d3f9754c1d03a92bfc04626fe1135a4">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+<!-- You can set your favicon here -->
+<link rel="shortcut icon" type="image/x-icon" href="/RUBAT-Recorder/favicon.ico">
+
+<!-- end custom head snippets -->
+    
+    <script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  </head>
+
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Calibrating Your Mics</h1>
+      <h2 class="project-tagline">A unified acquisition platform for high-sample-rate multichannel bioacoustics.</h2>
+
+      
+        <a href="https://github.com/raviumadi/RUBAT-Recorder" class="btn">View on GitHub</a>
+      
+
+      
+    </header>
+
+    <nav class="wahi-nav" aria-label="Primary navigation">
+  <div class="wahi-nav-inner">
+    <ul class="wahi-nav-list">
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/"
+            class="wahi-nav-link"
+            
+          >
+            Home
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/download/"
+            class="wahi-nav-link"
+            
+          >
+            Download
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/install/"
+            class="wahi-nav-link"
+            
+          >
+            Install
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/quickstart/"
+            class="wahi-nav-link"
+            
+          >
+            Quickstart
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/tips/"
+            class="wahi-nav-link"
+            
+          >
+            Tips
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/calibration/"
+            class="wahi-nav-link"
+            
+          >
+            Calibration
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/faq/"
+            class="wahi-nav-link"
+            
+          >
+            FAQ
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="https://biosonix.io"
+            class="wahi-nav-link"
+            
+          >
+            Lab
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</nav>
+
+    <main id="content" class="main-content" role="main">
+      <style>
+  .cb { border-radius:14px; padding:1.1rem 1.3rem; margin:0.9rem 0; }
+  .cb-blue  { background:linear-gradient(135deg,rgba(37,99,235,0.13),rgba(30,58,138,0.09)); border:1px solid rgba(59,130,246,0.25); }
+  .cb-teal  { background:linear-gradient(135deg,rgba(20,184,166,0.13),rgba(13,148,136,0.09)); border:1px solid rgba(20,184,166,0.28); }
+  .cb-amber { background:linear-gradient(135deg,rgba(245,158,11,0.13),rgba(180,83,9,0.08)); border:1px solid rgba(245,158,11,0.28); }
+  .cb-green { background:linear-gradient(135deg,rgba(34,197,94,0.12),rgba(22,163,74,0.08)); border:1px solid rgba(34,197,94,0.28); }
+  .cb-slate { background:rgba(15,23,42,0.04); border:1px solid rgba(148,163,184,0.2); }
+  .step { display:flex; gap:0.85rem; align-items:flex-start; margin:0.55rem 0; }
+  .step-n { min-width:1.65rem; height:1.65rem; border-radius:50%; background:rgba(59,130,246,0.75); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.85rem; flex-shrink:0; margin-top:0.1rem; }
+  .eq { background:rgba(15,23,42,0.05); border-left:3px solid rgba(99,102,241,0.6); border-radius:0 8px 8px 0; padding:0.6rem 1rem; margin:0.65rem 0; font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Courier New',monospace; font-size:0.97rem; overflow-x:auto; }
+  .tag { display:inline-block; padding:0.15rem 0.55rem; border-radius:999px; font-size:0.8rem; font-weight:700; }
+  .tag-m1 { background:rgba(59,130,246,0.15); color:rgba(37,99,235,1); border:1px solid rgba(59,130,246,0.3); }
+  .tag-m2 { background:rgba(20,184,166,0.15); color:rgba(13,148,136,1); border:1px solid rgba(20,184,166,0.3); }
+  .tag-m3 { background:rgba(245,158,11,0.15); color:rgba(146,64,14,1); border:1px solid rgba(245,158,11,0.3); }
+</style>
+
+<h1 id="microphone-calibration">Microphone Calibration</h1>
+
+<p>RUBAT’s calibration factor is a single number — <strong>Pa per ADC unit</strong> — that maps the raw normalised audio samples (range −1 to +1) to physical sound pressure in Pascals. Once entered, the live waveform display switches to <strong>dB SPL re 20 µPa</strong> and the Auto-mode threshold is interpreted in the same absolute scale.</p>
+
+<div class="cb cb-slate" style="margin-top:1rem;">
+<strong>How RUBAT uses the factor internally</strong><br /><br />
+
+Every audio sample <em>x</em> arriving from the ADC (in the range −1 … +1) is converted as follows:
+
+<div class="eq">
+p_Pa  = |x| × C          &nbsp;&nbsp;# instantaneous pressure in Pa<br />
+L_SPL = 20 × log₁₀(p_Pa / 20×10⁻⁶)   &nbsp;&nbsp;# dB SPL re 20 µPa
+</div>
+
+$$L_{\text{SPL}} = 20 \log_{10}\!\left(\frac{|x| \cdot C}{p_{\text{ref}}}\right), \quad p_{\text{ref}} = 20\,\mu\text{Pa}$$
+
+For the Auto threshold, the inverse is used: given a threshold $L_{\text{thr}}$ in dB SPL, RUBAT computes the equivalent ADC amplitude
+
+$$x_{\text{thr}} = \frac{20\,\mu\text{Pa} \cdot 10^{L_{\text{thr}}/20}}{C}$$
+
+and compares each incoming sample against $x_{\text{thr}}$ directly — no per-sample log is needed in the hot path.
+</div>
+
+<hr />
+
+<h2 id="what-is-a-pa-per-adc-unit">What is a “Pa per ADC unit”?</h2>
+
+<p>A modern audio interface presents samples normalised so that <strong>full-scale digital = 1.0</strong> (and −1.0). The physical voltage that produces that full-scale reading is the interface’s <strong>full-scale input voltage</strong>, $V_{\text{FS}}$.</p>
+
+<p>The microphone element produces a voltage proportional to acoustic pressure. Given microphone sensitivity $S_m$ (V/Pa) and total preamp gain $G$ (linear, unitless):</p>
+
+\[C = \frac{V_{\text{FS}}}{S_m \cdot G} \quad \text{[Pa/unit]}\]
+
+<p>Three practical routes to obtain $C$ are described below — choose the one that fits your equipment.</p>
+
+<hr />
+
+<h2 id="method-1--from-manufacturer-datasheets-no-extra-hardware">Method 1 — From manufacturer datasheets <span class="tag tag-m1">No extra hardware</span></h2>
+
+<p>You can calculate $C$ entirely from published specifications with no acoustic reference source.</p>
+
+<p><strong>What you need:</strong></p>
+<ul>
+  <li>Microphone sensitivity (datasheet) — usually given as <strong>mV/Pa</strong> or <strong>dBV/Pa</strong> (re 1 V/Pa)</li>
+  <li>Audio interface full-scale input level — usually given as <strong>dBu</strong> or <strong>dBV</strong></li>
+  <li>Preamp gain setting</li>
+</ul>
+
+<h3 id="step-by-step">Step-by-step</h3>
+
+<div class="cb cb-blue">
+
+<div class="step"><div class="step-n">1</div><div>
+<strong>Find microphone sensitivity $S_m$.</strong><br />
+The datasheet will give a value such as <em>−34 dBV/Pa</em> or <em>20 mV/Pa</em>. Convert to V/Pa:
+
+$$S_m \,[\text{V/Pa}] = 10^{S_{dBV}/20}$$
+
+Example: −34 dBV/Pa → $10^{-34/20} = 0.0200$ V/Pa = 20 mV/Pa
+</div></div>
+
+<div class="step"><div class="step-n">2</div><div>
+<strong>Convert interface full-scale to Volts peak.</strong><br />
+Interface specs often give a maximum input level in dBu (reference 0.775 V<sub>RMS</sub>) or dBV (re 1 V<sub>RMS</sub>):
+
+$$V_{\text{FS, peak}} = \sqrt{2} \cdot 0.775 \cdot 10^{V_{dBu}/20} \quad \text{(if given in dBu)}$$
+
+$$V_{\text{FS, peak}} = \sqrt{2} \cdot 10^{V_{dBV}/20} \quad \text{(if given in dBV)}$$
+
+Example: +18 dBu full scale → $\sqrt{2} \times 0.775 \times 10^{18/20} = 6.16$ V peak.<br /><br />
+
+<em>Note:</em> RUBAT's ADC unit corresponds to peak amplitude. If your interface datasheet gives an RMS full-scale figure, multiply by $\sqrt{2}$ to get peak.
+</div></div>
+
+<div class="step"><div class="step-n">3</div><div>
+<strong>Obtain the preamp gain $G$ (linear).</strong><br />
+If the gain knob is set to, e.g., +30 dB:
+
+$$G = 10^{30/20} \approx 31.6$$
+
+If gain is set to 0 dB (unity), then $G = 1$.
+</div></div>
+
+<div class="step"><div class="step-n">4</div><div>
+<strong>Calculate the calibration factor.</strong>
+
+$$\boxed{C = \frac{V_{\text{FS, peak}}}{S_m \cdot G}}$$
+
+Example: $V_{\text{FS}} = 6.16$ V, $S_m = 0.020$ V/Pa, $G = 31.6$
+
+$$C = \frac{6.16}{0.020 \times 31.6} = \frac{6.16}{0.632} \approx 9.75 \;\text{Pa/unit}$$
+</div></div>
+
+</div>
+
+<div class="cb cb-amber">
+<strong>⚠ Limitations of the datasheet method</strong><br />
+Microphone sensitivities are measured at 1 kHz under controlled conditions. The actual sensitivity of a given unit may differ by a few dB from the nominal value, and gain knob tracking on analogue preamps is rarely exact. Treat this method as a good first estimate — validate it acoustically whenever possible.
+</div>
+
+<hr />
+
+<h2 id="method-2--real-time-calibration-with-a-reference-sound-source-most-accurate">Method 2 — Real-time calibration with a reference sound source <span class="tag tag-m2">Most accurate</span></h2>
+
+<p>A <strong>sound level calibrator</strong> (e.g., a pistonphone or IEC 60942 Class 1 calibrator) emits a pure tone at a precisely known SPL and frequency — typically <strong>94 dB SPL at 1 kHz</strong> or <strong>114 dB SPL at 1 kHz</strong>. This is the standard field method.</p>
+
+<div class="cb cb-teal">
+
+<div class="step"><div class="step-n">1</div><div>
+Couple the calibrator to your microphone (most come with adaptors for standard capsule diameters — 1/4", 1/2", 1").
+</div></div>
+
+<div class="step"><div class="step-n">2</div><div>
+Start the RUBAT stream with <strong>Calibration = 0</strong> (uncalibrated mode). The waveform displays dBFS.
+</div></div>
+
+<div class="step"><div class="step-n">3</div><div>
+Activate the calibrator. Let the level settle for a few seconds, then note the peak amplitude visible in the waveform. Alternatively, record a short clip (Tap or Continuous) and compute the RMS in MATLAB:
+
+<div class="eq">
+[y, fs] = audioread('calibration_clip.wav');<br />
+x_rms   = rms(y);         % ADC units (RMS of the 1 kHz tone)
+</div>
+</div></div>
+
+<div class="step"><div class="step-n">4</div><div>
+The reference calibrator produces a known RMS pressure. For a 94 dB SPL tone:
+
+$$p_{\text{ref, RMS}} = 20\,\mu\text{Pa} \times 10^{94/20} = 1.000 \;\text{Pa RMS}$$
+
+For 114 dB SPL → $p_{\text{ref, RMS}} = 10.000$ Pa RMS.
+</div></div>
+
+<div class="step"><div class="step-n">5</div><div>
+Calculate the factor directly from the ratio:
+
+$$\boxed{C = \frac{p_{\text{ref, RMS}}}{x_{\text{RMS}}}}$$
+
+Example: measured RMS = 0.0412 ADC units during a 94 dB SPL tone:
+
+$$C = \frac{1.000}{0.0412} \approx 24.3 \;\text{Pa/unit}$$
+</div></div>
+
+<div class="step"><div class="step-n">6</div><div>
+Enter $C$ in the RUBAT <strong>Calibration</strong> field. The waveform should immediately display ~94 dB SPL (or 114 dB SPL, depending on your calibrator). Fine-tune if needed.
+</div></div>
+
+</div>
+
+<hr />
+
+<h2 id="method-3--two-channel-comparison-with-a-reference-microphone-no-calibrator-needed">Method 3 — Two-channel comparison with a reference microphone <span class="tag tag-m3">No calibrator needed</span></h2>
+
+<p>If you have one calibrated microphone with a known factor $C_{\text{ref}}$ but want to calibrate a second (test) microphone, you can derive the test factor by recording the same sound source on both channels simultaneously.</p>
+
+<div class="cb cb-green">
+
+<div class="step"><div class="step-n">1</div><div>
+Mount both microphones as close together as possible, pointing at the same sound source (a loudspeaker, or any stable broadband source works). Distance between capsules should be much less than the shortest wavelength of interest.
+</div></div>
+
+<div class="step"><div class="step-n">2</div><div>
+Record a clip with both mics on separate RUBAT input channels (Continuous mode, same gain settings).
+</div></div>
+
+<div class="step"><div class="step-n">3</div><div>
+Compute the RMS amplitude on each channel over the same time window:
+
+<div class="eq">
+[y, fs] = audioread('comparison_clip.wav');<br />
+x_ref   = rms(y(:, ch_ref));   % reference mic channel<br />
+x_test  = rms(y(:, ch_test));  % test mic channel
+</div>
+</div></div>
+
+<div class="step"><div class="step-n">4</div><div>
+The pressure at both capsules is (approximately) the same, so:
+
+$$p = x_{\text{ref}} \cdot C_{\text{ref}} = x_{\text{test}} \cdot C_{\text{test}}$$
+
+$$\boxed{C_{\text{test}} = C_{\text{ref}} \cdot \frac{x_{\text{ref}}}{x_{\text{test}}}}$$
+</div></div>
+
+<div class="step"><div class="step-n">5</div><div>
+<strong>Validate the result.</strong> Enter $C_{\text{test}}$ into RUBAT, then record the same source again. The dB SPL reading should match what the reference channel shows with $C_{\text{ref}}$ applied. If they agree within ~1 dB, calibration is satisfactory.
+</div></div>
+
+</div>
+
+<div class="cb cb-amber" style="margin-top:0.8rem;">
+<strong>⚠ Assumptions and caveats</strong><br />
+This method assumes both microphones occupy acoustically identical positions — valid in a free-field if capsule separation ≪ wavelength, but not valid near a reflecting wall or at high frequencies where even a few centimetres of separation introduces a phase difference. For ultrasonic work (&gt;20 kHz), co-locate capsules to within ~1 cm.
+</div>
+
+<hr />
+
+<h2 id="quick-reference--db-spl--pa">Quick reference — dB SPL ↔ Pa</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>dB SPL</th>
+      <th>Pa (RMS)</th>
+      <th>Typical source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20 dB</td>
+      <td>0.000 2 Pa</td>
+      <td>Rustling leaves (threshold of hearing)</td>
+    </tr>
+    <tr>
+      <td>60 dB</td>
+      <td>0.02 Pa</td>
+      <td>Normal conversation</td>
+    </tr>
+    <tr>
+      <td>94 dB</td>
+      <td><strong>1 Pa</strong></td>
+      <td>Standard calibrator (Class 1)</td>
+    </tr>
+    <tr>
+      <td>114 dB</td>
+      <td><strong>10 Pa</strong></td>
+      <td>Standard calibrator (high-level)</td>
+    </tr>
+    <tr>
+      <td>120 dB</td>
+      <td>20 Pa</td>
+      <td>Threshold of discomfort</td>
+    </tr>
+    <tr>
+      <td>140 dB</td>
+      <td>200 Pa</td>
+      <td>Jet engine at 30 m</td>
+    </tr>
+  </tbody>
+</table>
+
+\[L_{\text{SPL}} = 20 \log_{10}\!\left(\frac{p}{20\,\mu\text{Pa}}\right), \qquad p = 20\,\mu\text{Pa} \times 10^{L/20}\]
+
+<hr />
+
+<h2 id="entering-the-value-in-rubat">Entering the value in RUBAT</h2>
+
+<p>The <strong>Calibration</strong> field in the recording panel accepts a value in <strong>Pa per ADC unit</strong>. Enter 0 to disable (dBFS display). The field is available at all times — you can update it while the stream is stopped or running without restarting.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Uncalibrated (C = 0)</th>
+      <th>Calibrated (C &gt; 0)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Waveform Y axis</td>
+      <td>dBFS (0 dB = full scale)</td>
+      <td>dB SPL re 20 µPa</td>
+    </tr>
+    <tr>
+      <td>Waveform range</td>
+      <td>−120 dBFS … auto</td>
+      <td>0 … 140 dB SPL … auto</td>
+    </tr>
+    <tr>
+      <td>Auto threshold</td>
+      <td>Relative amplitude</td>
+      <td>Absolute dB SPL</td>
+    </tr>
+  </tbody>
+</table>
+
+
+      <!-- <footer class="site-footer">
+        
+          <span class="site-footer-owner">
+            <a href="https://github.com/raviumadi/RUBAT-Recorder">RUBAT-Recorder</a>
+            is maintained by <a href="https://github.com/raviumadi">raviumadi</a>.
+          </span>
+        
+        <span class="site-footer-credits">
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.
+        </span>
+      </footer> -->
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/RUBAT-Recorder/"></data>
+
+  <div class="wrapper">
+    <!-- Add links here and center-justify them -->
+    <!-- <div class="centered-justified-links">
+      <a href="/Art">Art</a>
+      <a href="/Bibliography">Bib</a>
+      <a href="/Recipe">Recipe</a>
+      <a href="/Contact">Contact</a>
+    </div> -->
+
+    <div class="footer-col-wrapper">
+      <!-- Add a horizontal line -->
+      <!-- <hr> -->
+      <div style="padding-top: 5px; padding-bottom: 5px;">
+      </div>
+      <!-- Center-align the site title -->
+      <h2 class="footer-heading" style="text-align: center; font-weight: bold;">RUBAT Studio</h2>
+      <p style="text-align: center; font-weight: bold;"><a href="https://biosonix.io/">Sounds and Senses Lab</a></p>
+      <!-- Center-align the site description -->
+      <p style="text-align: center;">A unified acquisition platform for high-sample-rate multichannel bioacoustics.</p>
+      <p style="text-align: center;">&copy; 2026 Ravi Umadi</p>
+
+      <!-- Add the link after the copyright with a smaller font size -->
+      <p style="text-align: center; font-size: smaller;"><a href="https://biosonix.io/Privacy-Policy">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

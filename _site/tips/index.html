@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Handy Tips | RUBAT Studio</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Handy Tips" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A unified acquisition platform for high-sample-rate multichannel bioacoustics." />
+<meta property="og:description" content="A unified acquisition platform for high-sample-rate multichannel bioacoustics." />
+<link rel="canonical" href="http://localhost:4000/RUBAT-Recorder/tips/" />
+<meta property="og:url" content="http://localhost:4000/RUBAT-Recorder/tips/" />
+<meta property="og:site_name" content="RUBAT Studio" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Handy Tips" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"A unified acquisition platform for high-sample-rate multichannel bioacoustics.","headline":"Handy Tips","url":"http://localhost:4000/RUBAT-Recorder/tips/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/RUBAT-Recorder/assets/css/style.css?v=29fa62d69d3f9754c1d03a92bfc04626fe1135a4">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+<!-- You can set your favicon here -->
+<link rel="shortcut icon" type="image/x-icon" href="/RUBAT-Recorder/favicon.ico">
+
+<!-- end custom head snippets -->
+    
+    <script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  </head>
+
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Handy Tips</h1>
+      <h2 class="project-tagline">A unified acquisition platform for high-sample-rate multichannel bioacoustics.</h2>
+
+      
+        <a href="https://github.com/raviumadi/RUBAT-Recorder" class="btn">View on GitHub</a>
+      
+
+      
+    </header>
+
+    <nav class="wahi-nav" aria-label="Primary navigation">
+  <div class="wahi-nav-inner">
+    <ul class="wahi-nav-list">
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/"
+            class="wahi-nav-link"
+            
+          >
+            Home
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/download/"
+            class="wahi-nav-link"
+            
+          >
+            Download
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/install/"
+            class="wahi-nav-link"
+            
+          >
+            Install
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/quickstart/"
+            class="wahi-nav-link"
+            
+          >
+            Quickstart
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/tips/"
+            class="wahi-nav-link active"
+            aria-current="page"
+          >
+            Tips
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/calibration/"
+            class="wahi-nav-link"
+            
+          >
+            Calibration
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="/RUBAT-Recorder/faq/"
+            class="wahi-nav-link"
+            
+          >
+            FAQ
+          </a>
+        </li>
+      
+        <li class="wahi-nav-item">
+          <a
+            href="https://biosonix.io"
+            class="wahi-nav-link"
+            
+          >
+            Lab
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</nav>
+
+    <main id="content" class="main-content" role="main">
+      <style>
+.callout {
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 10px;
+  border-left: 6px solid;
+  background: #f8f9fb;
+}
+.callout h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.callout.safety {
+  border-color: #e63946;
+  background: #fff5f5;
+}
+.callout.pro {
+  border-color: #2a9d8f;
+  background: #f1fbf9;
+}
+.callout.trouble {
+  border-color: #f4a261;
+  background: #fff8f1;
+}
+</style>
+
+<h1 id="best-practices">Best Practices</h1>
+
+<p>Professional audio recording — especially with multiple channels, multiple devices, and complex input/output routing — requires care and understanding.</p>
+
+<p>Operating a professional multi-channel recording system is more like operating a studio camera: it requires technical awareness, deliberate workflow, and practice.</p>
+
+<p>RUBAT Studio is designed for <strong>real‑time multi‑channel recording</strong> with optional <strong>live monitoring</strong> (passthrough or heterodyne) and <strong>retrospective capture</strong> via a ring buffer. Multi‑device audio routing is powerful, but it can also be unforgiving—these notes help you avoid the most common pitfalls and get clean, reliable recordings.</p>
+
+<p>With practice, the system becomes intuitive — and once your data collection runs smoothly, the learning curve becomes genuinely enjoyable.</p>
+
+<hr />
+
+<h2 id="quick-start-workflow">Quick start workflow</h2>
+
+<ol>
+  <li><strong>Select an input device</strong> (top left, ▶ IN).</li>
+  <li>(Optional) <strong>Select an output device</strong> (▶ OUT). If you choose <strong>(none)</strong>, monitoring is disabled (recommended for first tests).</li>
+  <li>Click <strong>↺ Refresh</strong> to <strong>probe</strong> the selected devices and populate channel lists.</li>
+  <li>In <strong>Channel Selection</strong>, choose the input channels you want to record.</li>
+  <li>Set your <strong>recording mode</strong> (Tap / Continuous / Auto) and your <strong>destination folder</strong>.</li>
+  <li>Press <strong>▶ START</strong>.</li>
+  <li>Use <strong>⏺ RECORD</strong> according to your mode.</li>
+</ol>
+
+<p><strong>Keyboard shortcuts</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">s</code> → START</li>
+  <li><code class="language-plaintext highlighter-rouge">S</code> → STOP</li>
+  <li><code class="language-plaintext highlighter-rouge">t</code> → Record button action (Tap / Continuous toggle / Auto arm)</li>
+  <li><code class="language-plaintext highlighter-rouge">x</code> → Stop Continuous recording (quick safety stop)</li>
+</ul>
+
+<hr />
+
+<h2 id="selecting-devices--understanding-channels">Selecting devices &amp; understanding channels</h2>
+
+<h3 id="input-vs-output-devices">Input vs output devices</h3>
+<ul>
+  <li><strong>Input device</strong>: your microphones / ADC / audio interface inputs.</li>
+  <li><strong>Output device</strong>: headphones / speakers / line‑out used for monitoring.</li>
+</ul>
+
+<p>Many audio interfaces expose <strong>multiple logical outputs</strong> (e.g., 1–8) plus a <strong>headphone bus</strong> that mirrors some mix. In RUBAT, the <strong>Output Channels</strong> selection controls what RUBAT <em>writes</em> to the device—your interface may still route that internally depending on its driver/mixer.</p>
+
+<h3 id="device-not-appearing">Device not appearing?</h3>
+<p>If your interface does not show up in a dropdown:</p>
+<ul>
+  <li>Confirm the OS sees it (macOS Audio MIDI Setup / Windows Sound settings).</li>
+  <li>Install the correct driver/control panel (especially for pro interfaces).</li>
+  <li>Disconnect/reconnect the device and try <strong>↺ Refresh</strong>.</li>
+</ul>
+
+<hr />
+
+<h2 id="refresh-vs-probe">Refresh vs probe</h2>
+
+<p>RUBAT separates <em>listing</em> from <em>opening</em>:</p>
+<ul>
+  <li><strong>Device dropdowns at launch</strong> do <strong>not</strong> probe immediately.</li>
+  <li><strong>↺ Refresh</strong> re‑enumerates and then <strong>probes</strong> to confirm sample‑rate/channel availability.</li>
+</ul>
+
+<p>Once you press <strong>START</strong>, device selection controls are locked for the run (this avoids mid‑run PortAudio/CoreAudio instability).</p>
+
+<hr />
+
+<h2 id="monitoring-modes-optional-output">Monitoring modes (optional output)</h2>
+
+<p>Monitoring is optional.</p>
+<ul>
+  <li>If <strong>Output device = (none)</strong>, <strong>monitoring is off</strong> and monitoring controls are disabled.</li>
+  <li>If an output is selected, you can choose:
+    <ul>
+      <li><strong>Off</strong>: no audio is written to output.</li>
+      <li><strong>Passthrough</strong>: audible monitoring of the selected input.</li>
+      <li><strong>Heterodyne</strong>: down‑converts ultrasound to audible via a carrier frequency.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="callout safety">
+<h4>⚠ Safety</h4>
+If microphones and speakers share the same space, acoustic feedback can ramp up instantly.  <br />
+• Start with Output mode = Off  <br />
+• Prefer headphones  <br />
+• Raise Monitor gain slowly <br />
+</div>
+
+<h3 id="monitoring-routing-mix-vs-mon-l--mon-r">Monitoring routing: Mix vs Mon L / Mon R</h3>
+<ul>
+  <li><strong>Mix L+R ON</strong>: all selected input channels are <strong>summed</strong> (not averaged) and sent to <strong>both ears</strong>.</li>
+  <li><strong>Mix L+R OFF</strong>: monitoring uses <strong>Mon. Left</strong> and <strong>Mon. Right</strong> to pick the input channels for L/R.</li>
+</ul>
+
+<h3 id="output-channel-selection-lr-gating">Output channel selection (L/R gating)</h3>
+<p>RUBAT treats output channels as:</p>
+<ul>
+  <li><strong>Odd output channels → Left</strong></li>
+  <li><strong>Even output channels → Right</strong></li>
+</ul>
+
+<p>If you select only odd channels, monitoring is left‑only; only even channels gives right‑only; selecting both produces stereo.</p>
+
+<hr />
+
+<h2 id="sample-rate-bit-depth-and-frame-size">Sample rate, bit depth, and frame size</h2>
+
+<h3 id="sample-rate">Sample rate</h3>
+<ul>
+  <li>Choose a rate supported by your input device (common: 48 kHz; ultrasound: 96/192 kHz).</li>
+  <li>If input and output sample rates differ, RUBAT will resample for monitoring.</li>
+</ul>
+
+<h3 id="bit-depth">Bit depth</h3>
+<p>RUBAT defaults to <strong>32‑bit</strong> where available.</p>
+<ul>
+  <li><strong>Recording is written</strong> with the selected/actual input depth.</li>
+  <li>Monitoring runs internally as floating point.</li>
+</ul>
+
+<h3 id="frame-size-buffer">Frame size (buffer)</h3>
+<p>Frame size is a key stability/latency knob:</p>
+<ul>
+  <li>Smaller frames → lower latency, higher CPU load.</li>
+  <li>Larger frames → higher latency, usually fewer dropouts.</li>
+</ul>
+
+<p>If you see dropouts, increase frame size (e.g., 4096 → 8192) before changing anything else.</p>
+
+<hr />
+
+<h2 id="visuals-and-performance">Visuals and performance</h2>
+
+<p>Live waveform + spectrogram cost CPU/GPU.</p>
+<ul>
+  <li>If the UI looks “dizzy” or the machine struggles, turn <strong>Visuals</strong> off.</li>
+  <li>Keep <strong>UI FPS</strong> reasonable (≤ 20 is often plenty).</li>
+  <li>Use <strong>Spec Ymax</strong> to zoom the spectrogram to your band of interest (e.g., set 100000 for 100 kHz) so energy is not compressed at the bottom.</li>
+</ul>
+
+<hr />
+
+<h2 id="avoiding-dropouts-most-important">Avoiding dropouts (most important)</h2>
+
+<p>The status line under <strong>START</strong> reports:</p>
+<ul>
+  <li><strong>drop</strong>: how often frames arrived late (a practical dropout indicator)</li>
+  <li><strong>dt</strong>: time between frames</li>
+</ul>
+
+<div class="callout pro">
+<h4>💡 Pro Tip</h4>
+If you see dropouts, increase frame size first (e.g., 4096 → 8192) before changing other settings.
+</div>
+
+<p>Dropouts usually mean the audio configuration is not stable.</p>
+
+<h3 id="common-causes">Common causes</h3>
+<ul>
+  <li><strong>Frame size too small</strong> for the CPU/interface.</li>
+  <li><strong>Heavy resampling</strong> (large mismatch between input and output sample rates).</li>
+  <li><strong>Driver constraints</strong> (some devices enforce fixed buffer sizes).</li>
+  <li><strong>Trying to open/close output streams repeatedly</strong> on the same physical device.</li>
+</ul>
+
+<h3 id="what-to-do">What to do</h3>
+<ol>
+  <li>Set <strong>Output device = (none)</strong> for a clean input‑only test.</li>
+  <li>Increase <strong>Frame size</strong>.</li>
+  <li>Disable <strong>Visuals</strong>.</li>
+  <li>Match input/output <strong>sample rates</strong> where possible.</li>
+</ol>
+
+<hr />
+
+<h2 id="recording-modes">Recording modes</h2>
+
+<h3 id="tap-retrospective-clip">Tap (retrospective clip)</h3>
+<p>You may <em>tap</em> into the ring buffer and write out a clip consisting of:</p>
+<ul>
+  <li><strong>Pre</strong> seconds from the ring buffer</li>
+  <li><strong>Post</strong> seconds after the trigger</li>
+</ul>
+
+<p>Use Tap when you want short, precisely captured events.</p>
+
+<h3 id="continuous">Continuous</h3>
+<p>Continuous writes a file until you stop it.</p>
+<ul>
+  <li><strong>Post</strong> and <strong>Ring</strong> are disabled (by design).</li>
+</ul>
+
+<div class="callout safety">
+<h4>⚠ Caution</h4>
+Multi-channel high-rate recording generates large files quickly. Monitor disk space.
+</div>
+
+<div class="callout pro">
+<h4> ✓ Alternative strategy</h4>
+Use a longer Post window with larger ring buffer in TAP mode instead of full continuous recording.
+</div>
+
+<h3 id="auto-thresholdtriggered-tap">Auto (threshold‑triggered Tap)</h3>
+<p>Auto arms a simple event detector on the waveform channel.</p>
+<ul>
+  <li><strong>Thr (dB)</strong>: threshold.</li>
+  <li><strong>Peaks</strong>: number of threshold events required within the last <strong>Pre</strong> seconds.</li>
+</ul>
+
+<p><strong>Calibration (Pa/u) matters</strong></p>
+<ul>
+  <li>If <strong>Cal (Pa/u) &gt; 0</strong>, the waveform and threshold are interpreted as <strong>dB SPL re 20 µPa</strong>.</li>
+  <li>If <strong>Cal (Pa/u) = 0</strong>, the display/threshold are <strong>relative (dBFS)</strong>.</li>
+</ul>
+
+<p>Auto mode is especially useful for field deployments (e.g., bat activity monitoring) where unattended operation is needed.</p>
+
+<div class="callout pro">
+<h4>💡 Pro Tip</h4>
+If recording short chirps that clearly cross threshold and are separated by at least one buffer frame, Auto mode can significantly reduce manual effort.
+</div>
+<hr />
+
+<h2 id="ensuring-wav-file-integrity">Ensuring WAV file integrity</h2>
+
+<p>Before an important session:</p>
+<ul>
+  <li>Make a few test recordings in your target configuration.</li>
+  <li>Play back and verify channel mapping.</li>
+  <li>Confirm the time window (Pre/Post) and sample rate.</li>
+</ul>
+
+<p>If dropouts remain at zero (or very low), WAV files are typically clean.</p>
+
+<hr />
+
+<h2 id="good-lab-habits">Good lab habits</h2>
+
+<ul>
+  <li>Keep one <strong>project folder</strong> and record all sessions into dated subfolders.</li>
+  <li>Add a <code class="language-plaintext highlighter-rouge">readme.txt</code> in each day’s folder with:
+    <ul>
+      <li>device setup</li>
+      <li>gain/phantom settings</li>
+      <li>mic/array geometry</li>
+      <li>notes on the protocol</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="file-suffix-feature">File Suffix Feature</h3>
+
+<p>Use file suffixes to append metadata (animal ID, experiment name, user, array configuration).</p>
+
+<p>This is especially useful in shared lab environments where multiple projects use the same terminal.</p>
+
+<hr />
+
+<div class="callout trouble">
+<h4>🛠 Troubleshooting</h4>
+If you see the <strong>drop</strong> counter increasing, monitoring glitches, or PortAudio errors, your system is likely operating near its stability limit. Work through the following steps in order:
+<br />
+1. <strong>Set Output device = (none)</strong>  <br />
+   This isolates input recording and removes monitoring + resampling load. If dropouts disappear, the issue is in the monitoring path.
+<br />
+2. <strong>Increase Frame size</strong>  <br />
+   Larger buffers give the CPU and driver more time to process audio. This is the most effective first fix.
+<br />
+3. <strong>Disable Visuals</strong>  <br />
+   Spectrogram rendering can consume GPU/CPU resources, especially at high sample rates.
+<br />
+4. <strong>Match input/output sample rates</strong>  <br />
+   Resampling adds processing overhead. Keeping both devices at the same sample rate reduces load.
+<br />
+5. <strong>Stop → Refresh → Restart</strong>  <br />
+   If PortAudio or driver errors appear, fully stop the stream, refresh devices, and start again. Avoid repeatedly opening/closing writers mid‑run.<br />
+</div>
+
+<hr />
+
+<h2 id="final-checklist-before-recording">Final Checklist Before Recording</h2>
+
+<ul>
+  <li>Devices selected correctly?</li>
+  <li>Channels mapped correctly?</li>
+  <li>Sample rate supported?</li>
+  <li>Monitoring safe?</li>
+  <li>Drop counter stable?</li>
+</ul>
+
+<p>If yes — you are ready to record with confidence.</p>
+
+
+      <!-- <footer class="site-footer">
+        
+          <span class="site-footer-owner">
+            <a href="https://github.com/raviumadi/RUBAT-Recorder">RUBAT-Recorder</a>
+            is maintained by <a href="https://github.com/raviumadi">raviumadi</a>.
+          </span>
+        
+        <span class="site-footer-credits">
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.
+        </span>
+      </footer> -->
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/RUBAT-Recorder/"></data>
+
+  <div class="wrapper">
+    <!-- Add links here and center-justify them -->
+    <!-- <div class="centered-justified-links">
+      <a href="/Art">Art</a>
+      <a href="/Bibliography">Bib</a>
+      <a href="/Recipe">Recipe</a>
+      <a href="/Contact">Contact</a>
+    </div> -->
+
+    <div class="footer-col-wrapper">
+      <!-- Add a horizontal line -->
+      <!-- <hr> -->
+      <div style="padding-top: 5px; padding-bottom: 5px;">
+      </div>
+      <!-- Center-align the site title -->
+      <h2 class="footer-heading" style="text-align: center; font-weight: bold;">RUBAT Studio</h2>
+      <p style="text-align: center; font-weight: bold;"><a href="https://biosonix.io/">Sounds and Senses Lab</a></p>
+      <!-- Center-align the site description -->
+      <p style="text-align: center;">A unified acquisition platform for high-sample-rate multichannel bioacoustics.</p>
+      <p style="text-align: center;">&copy; 2026 Ravi Umadi</p>
+
+      <!-- Add the link after the copyright with a smaller font size -->
+      <p style="text-align: center; font-size: smaller;"><a href="https://biosonix.io/Privacy-Policy">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
