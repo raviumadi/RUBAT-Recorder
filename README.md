@@ -14,7 +14,7 @@ Developed by [Sounds and Senses Lab](https://biosonix.io).
 
 RUBAT Studio is a standalone GUI application for high-sample-rate, multichannel audio capture and real-time monitoring. Originally designed for ultrasonic field bioacoustics (bat surveys, insect acoustics, bird vocalisations), it is equally suited for any multichannel recording scenario — from studio sessions to environmental monitoring.
 
-The application runs as a single MATLAB function (`rubat.m`) with no external dependencies beyond the standard MATLAB toolbox ecosystem. It can also be deployed as a standalone app via MATLAB Compiler, requiring only the free MATLAB Runtime.
+The application is deployed as a standalone app via MATLAB Compiler, requiring only the free MATLAB Runtime — no MATLAB licence needed.
 
 > **Pronunciation:** "Rue-BAT" — rhymes with "blue bat." IPA: `/ˈruː.bæt/`
 
@@ -81,18 +81,7 @@ Supply a **Pa-per-unit** sensitivity factor and the waveform switches to calibra
 
 ## Requirements
 
-### Running from MATLAB source
-
-| Requirement | Version |
-|-------------|---------|
-| MATLAB | R2023b or later recommended |
-| Signal Processing Toolbox | Required |
-| DSP System Toolbox | Required |
-| Audio Toolbox | Required |
-
-### Running as standalone app
-
-- **MATLAB Runtime** (free) — version matching the packaged build.
+- **MATLAB Runtime R2023b** (free) — bundled with the installer.
 - No MATLAB licence required.
 - macOS and Windows installers provided.
 
@@ -100,23 +89,13 @@ Supply a **Pa-per-unit** sensitivity factor and the waveform switches to calibra
 
 ## Installation
 
-### Option A: Standalone installer (no MATLAB needed)
-
 1. Download the latest release from the [Releases](https://github.com/raviumadi/RUBAT-Recorder/releases) page.
 2. Run the platform-specific installer:
    - **macOS:** Mount the `.dmg` and drag RUBAT Studio to Applications.
    - **Windows:** Run the `.exe` installer.
-3. If prompted, install the MATLAB Runtime (the installer will guide you).
+3. The MATLAB Runtime R2023b is installed automatically if not already present.
 
-### Option B: Run from source
-
-1. Clone or download this repository.
-2. Ensure MATLAB (R2023b+) is installed with the required toolboxes.
-3. Open MATLAB and navigate to the `src/` directory.
-4. Run:
-   ```matlab
-   rubat
-   ```
+See the [Install Guide](https://rubat.biosonix.io/install/) for detailed step-by-step instructions.
 
 ---
 
@@ -200,13 +179,13 @@ The interface is divided into two main areas:
 
 ## Architecture
 
-RUBAT Studio is implemented as a single function (`rubat()`) with nested functions sharing a common state struct `S`. Key architectural decisions:
+Key design points:
 
-- **Timer-free capture loop** — Audio frames are read in a tight `while` loop using `audioDeviceReader` function handles, avoiding MATLAB timer overhead and jitter.
+- **Timer-free capture loop** — Audio frames are read in a tight loop, avoiding MATLAB timer overhead and jitter.
 - **Ring buffer** — A pre-allocated circular buffer holds the last N seconds of all input channels for instant tap capture.
-- **Streaming WAV writer** — A lightweight struct-based WAV writer that keeps the file handle open for continuous recording, finalising the RIFF header on close.
-- **Resample on monitor path only** — Input-to-output sample rate conversion (e.g., 192 kHz → 48 kHz) uses `resample()` with rational P/Q factors, applied only to the monitoring path. Recordings are always written at the native input sample rate.
-- **Same-device duplex handling** — When input and output share a physical device, RUBAT locks their sample rates together and writes silence to the output when monitoring is off to keep the PortAudio driver clock ticking.
+- **Streaming WAV writer** — Keeps the file handle open for continuous recording, finalising the RIFF header on close.
+- **Resample on monitor path only** — Input-to-output sample rate conversion (e.g., 192 kHz → 48 kHz) is applied only to the monitoring path. Recordings are always written at the native input sample rate.
+- **Same-device duplex handling** — When input and output share a physical device, RUBAT locks their sample rates together and coordinates buffer management automatically.
 
 ---
 
