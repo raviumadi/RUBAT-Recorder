@@ -4,8 +4,8 @@ remote_theme: pages-themes/cayman@v0.2.0
 
 # Find the theme documentation here --> https://github.com/pages-themes/cayman
 
-url: "https://raviumadi.github.io"
-baseurl: "/RUBAT-Recorder"   # IMPORTANT: must match your repo name exactly
+url: "https://biosonix.io"
+baseurl: ""   # IMPORTANT: must match your repo name exactly
 permalink: pretty
 
 # Appearance
