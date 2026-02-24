@@ -22,6 +22,8 @@ The application runs as a single MATLAB function (`rubat.m`) with no external de
 
 <p align="center">
   <img src="etc/rubat_app.png" alt="RUBAT Studio UI" width="100%" />
+  <br>
+  <strong><em>RUBAT Studio v4.0</em> — Record sounds across a wide range of audio bands using built-in or external audio interfaces. Installation packages are available for macOS and Windows.</strong>
 </p>
 
 ---
