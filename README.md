@@ -21,7 +21,7 @@ The application runs as a single MATLAB function (`rubat.m`) with no external de
 ---
 
 <p align="center">
-  <img src="https://rubat.biosonix.io/assets/home/img/rubat_firstview.png" alt="RUBAT Studio UI" width="100%" />
+  <img src="etc/rubat_app.png" alt="RUBAT Studio UI" width="100%" />
 </p>
 
 ---
