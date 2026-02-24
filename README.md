@@ -227,6 +227,8 @@ If you use RUBAT Studio in your research, please cite:
 
 RUBAT Studio is released under the [GNU General Public License v3.0](LICENSE.md).
 
+Souce code is available at request. Contact the author via [BIOSONIX](https://biosonix.io).
+
 Copyright © 2026 Ravi Umadi — Sounds and Senses Lab.
 
 This software is provided "as is", without warranty of any kind. See [LICENSE.md](LICENSE.md) for full details.
