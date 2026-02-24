@@ -60,8 +60,8 @@ Academic and non-commercial research use is fully supported.
   const btn = document.getElementById('downloadBtn');
 
   const links = {
-    mac: "{{ '/downloads/mac/wahi_gui_web.zip' | relative_url }}",
-    win: "{{ '/downloads/winx64/wahi_gui_web.exe.zip' | relative_url }}"
+    mac: "https://github.com/raviumadi/RUBAT-Recorder/releases/download/R1.0/rubat_web_macos.zip",
+    win: "https://github.com/raviumadi/RUBAT-Recorder/releases/download/R1.0/rubat_web_win64.exe.zip"
   };
 
   select.addEventListener('change', function () {
