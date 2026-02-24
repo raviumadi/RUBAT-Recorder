@@ -27,7 +27,7 @@ colors:
 # Options # <-- Enable and update
 
 # show_downloads: true # ["true" or "false" (unquoted) to indicate whether to provide a download URL]
-# google_analytics: [Your Google Analytics tracking ID]
+google_analytics: G-VB72F8XQLB
 
 # github:
 #   zip_url: http://example.com/download.zip
