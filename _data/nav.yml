@@ -1,0 +1,17 @@
+- title: Home
+  url: /
+- title: Download
+  url: /download/
+- title: Install
+  url: /install/
+- title: Quickstart
+  url: /quickstart/
+- title: Tips
+  url: /tips/
+- title: Calibration
+  url: /calibration/
+- title: FAQ
+  url: /faq/
+- title: Lab
+  url: https://biosonix.io
+  external: true
