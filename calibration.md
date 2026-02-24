@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Calibrating Your Mics
-permalink: /calibration
+permalink: /calibration/
 nav_order: 1
 ---
 
