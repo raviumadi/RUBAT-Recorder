@@ -22,6 +22,8 @@ Head to the [Download]({{ site.baseurl }}/download/) page and grab the installer
 | **macOS** | [`rubat_web_macos.zip`](https://github.com/raviumadi/RUBAT-Recorder/releases/download/R1.0/rubat_web_macos.zip) |
 | **Windows** | [`rubat_web_win64.exe.zip`](https://github.com/raviumadi/RUBAT-Recorder/releases/download/R1.0/rubat_web_win64.exe.zip) |
 
+Apple Intel machines are not tested. 
+
 ---
 
 ## 2. Run the Installer
