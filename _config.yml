@@ -43,10 +43,10 @@ search:
   tokenizer_separator: /[\s/]+/
   rel_url: true
 
-# Aux links (top-right)
-aux_links:
-  "GitHub Repository":
-    - "https://github.com/raviumadi/RUBAT-Recorder" # Update this
+# # Aux links (top-right)
+# aux_links:
+#   "GitHub Repository":
+#     - "https://github.com/raviumadi/RUBAT-Recorder" # Update this
 
 # Footer/back-to-top
 back_to_top: true
