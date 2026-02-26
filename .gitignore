@@ -7,4 +7,5 @@ Gemfile
 docs.code-workspace
 setting.txt
 logo
-packagingsrc
+packaging
+src
