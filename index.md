@@ -103,14 +103,14 @@ nav_order: 1
      onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 22px rgba(21,128,61,0.50), inset 0 1px 0 rgba(255,255,255,0.40)';"
      onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 14px rgba(21,128,61,0.40), inset 0 1px 0 rgba(255,255,255,0.35)';">
     <span style="position:absolute; top:0; left:0; right:0; height:50%; background:linear-gradient(180deg,rgba(255,255,255,0.28),rgba(255,255,255,0)); border-radius:12px 12px 0 0; pointer-events:none;"></span>
-    ⬇ Download macOS
+    ⬇ Download for macOS
   </a>
   <a href="https://github.com/raviumadi/RUBAT-Recorder/releases/download/R1.0/rubat_web_win64.exe.zip"
      style="position:relative; display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; min-width:240px; padding:0.85rem 1.8rem; font-size:1.05rem; font-weight:700; color:#fff; background:linear-gradient(135deg,#3b82f6,#15803d); border-radius:12px; text-decoration:none; box-shadow:0 4px 14px rgba(21,128,61,0.40), inset 0 1px 0 rgba(255,255,255,0.35); overflow:hidden; transition:transform 140ms ease, box-shadow 140ms ease;"
      onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 22px rgba(21,128,61,0.50), inset 0 1px 0 rgba(255,255,255,0.40)';"
      onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 14px rgba(21,128,61,0.40), inset 0 1px 0 rgba(255,255,255,0.35)';">
     <span style="position:absolute; top:0; left:0; right:0; height:50%; background:linear-gradient(180deg,rgba(255,255,255,0.28),rgba(255,255,255,0)); border-radius:12px 12px 0 0; pointer-events:none;"></span>
-    ⬇ Download Windows x64
+    ⬇ Download for Windows
   </a>
 </div>
 
