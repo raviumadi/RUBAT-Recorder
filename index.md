@@ -290,26 +290,23 @@ In short, RUBAT combines research-grade reliability with studio flexibility — 
 
 </div>
 
-<!-- ---
+---
 
 ## Example recording
 
 <div style="margin:1.25rem 0; padding:1.25rem; border-radius:14px; background:linear-gradient(135deg,#0b1220,#111827); color:#e5e7eb; box-shadow:0 10px 24px rgba(0,0,0,0.25);">
-  <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
-    <div style="min-width:240px;">
-      <div style="font-size:0.95rem; color:#93c5fd; font-weight:700;">Field example</div>
-      <div style="font-size:1.15rem; font-weight:800; margin-top:0.25rem;">Myotis daubentonii — heterodyne preview</div>
-      <div style="margin-top:0.45rem; color:#cbd5e1; line-height:1.55;">Recorded at 192 kHz. Monitoring enabled. Full-bandwidth WAV archived.</div>
-    </div>
-    <div style="min-width:280px; flex:1;">
-      <audio controls style="width:100%; margin-top:0.25rem;">
-        <source src="{{ '/assets/audio/example_bat_call.wav' | relative_url }}" type="audio/wav">
-        Your browser does not support the audio element.
-      </audio>
-      <div style="margin-top:0.6rem; font-size:0.85rem; color:#94a3b8;">Audio placeholder: <code>/assets/audio/example_bat_call.wav</code></div>
-    </div>
+  <div style="min-width:240px; margin-bottom:0.75rem;">
+    <div style="font-size:0.95rem; color:#93c5fd; font-weight:700;">Field testing</div>
+    <div style="font-size:1.15rem; font-weight:800; margin-top:0.25rem;">Two-channel recording</div>
   </div>
-</div> -->
+  <div style="border-radius:12px; overflow:hidden; border:1px solid rgba(148,163,184,0.14);">
+    <video controls id="fieldVideo" style="width:100%; display:block;">
+      <source src="{{ '/assets/home/video/spectrogram_video_20260227_133734_147.mp4' | relative_url }}" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+    <script>document.getElementById('fieldVideo').volume = 0.5;</script>
+  </div>
+</div>
 
 ---
 
