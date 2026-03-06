@@ -238,10 +238,9 @@ It was developed independently to support robust, reproducible bioacoustic data 
 
 ## 14. Where can I find the scientific literature associated with RUBAT?
 
-Scientific descriptions and related methodological papers can be found on bioRxiv.
+The RUBAT preprint is now available.
 
-👉 [View related publications on bioRxiv](https://www.biorxiv.org/)  
-*(Placeholder — replace with specific RUBAT preprint link)*
+👉 [Read the paper](https://doi.org/10.64898/2026.03.01.708807)
 
 These publications describe the design rationale, implementation details, and validation experiments associated with the system.
 

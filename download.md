@@ -5,6 +5,50 @@ permalink: /download/
 nav_order: 1
 ---
 
+<style>
+  .rubat-download-panel {
+    max-width: 520px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--surface-soft) 92%, transparent);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .rubat-download-panel h3 {
+    margin-top: 0;
+  }
+
+  .rubat-download-panel select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 0.7rem;
+    border: 1px solid var(--line);
+    margin: 1rem 0;
+    background: var(--surface-solid);
+    color: var(--text);
+  }
+
+  .rubat-download-panel a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, var(--rubat-blue), var(--rubat-teal));
+    border-radius: 999px;
+    text-decoration: none;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+</style>
+
 # Download RUBAT Recorder
 
 Select your operating system to download the latest packaged release.
@@ -14,23 +58,17 @@ The installers include everything required to run the application.
 
 ---
 
-<div style="max-width:520px; margin:2rem auto; padding:1.5rem; border:1px solid #ddd; border-radius:12px; background:#fafafa; text-align:center;">
+<div class="rubat-download-panel">
 
-  <h3 style="margin-top:0;">Choose your platform</h3>
+  <h3>Choose your platform</h3>
 
-  <select id="osSelect"
-          style="width:100%; padding:10px; font-size:1rem; border-radius:6px; border:1px solid #ccc; margin:1rem 0;">
+  <select id="osSelect">
     <option value="">— Select operating system —</option>
     <option value="mac">macOS (Apple Silicon)</option>
     <option value="win">Windows (64-bit)</option>
   </select>
 
-  <a id="downloadBtn"
-     href="#"
-     style="display:inline-block; padding:12px 22px; margin-top:10px;
-            font-size:1rem; font-weight:600; color:white;
-            background:#2f80ed; border-radius:8px;
-            text-decoration:none; pointer-events:none; opacity:0.5;">
+  <a id="downloadBtn" href="#">
     Download
   </a>
 

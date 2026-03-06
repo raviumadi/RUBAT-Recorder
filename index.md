@@ -3,115 +3,43 @@ layout: default
 title: RUBAT Studio
 permalink: /
 nav_order: 1
+description: Live audio-visual monitoring and high-fidelity multichannel recording for field bioacoustics.
 ---
-
-<style>
-  /* Click-to-zoom affordance */
-  .rb-zoom{
-    cursor: zoom-in;
-    transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
-  }
-  .rb-zoom:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.28);
-    border-color: rgba(255,255,255,0.18) !important;
-  }
-
-  /* Lightbox Modal */
-  .rb-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    padding: 3rem 2rem;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background: rgba(0,0,0,0.9);
-  }
-
-  .rb-modal-content {
-    margin: auto;
-    display: block;
-    max-width: 95%;
-    max-height: 90vh;
-    border-radius: 12px;
-  }
-
-  .rb-close {
-    position: absolute;
-    top: 18px;
-    right: 34px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: 700;
-    cursor: pointer;
-    line-height: 1;
-    opacity: 0.9;
-  }
-  .rb-close:hover{ opacity: 1; }
-
-  /* Optional: caption */
-  .rb-modal-caption{
-    margin: 0.9rem auto 0;
-    max-width: 95%;
-    color: rgba(226,232,240,0.9);
-    text-align: center;
-    font-size: 0.95rem;
-  }
-</style>
 
 # Realtime Unified BioAcoustic Tool
 
-<div style="margin:1.25rem 0 1.5rem; padding:1.5rem; border-radius:16px; background:linear-gradient(135deg, rgb(78, 100, 143), rgb(27, 68, 34)); color:rgba(229,231,235,1); box-shadow:0 12px 28px rgba(0,0,0,0.28);">
-
-  <!-- Full-width image -->
-  <div style="border-radius:14px; overflow:hidden; border:1px solid rgba(90,149,231,0.18); background:rgba(255,255,255,0.03);">
-    <img src="{{ '/assets/home/img/rubat_firstview.png' | relative_url }}" 
-         alt="RUBAT Studio UI" 
+<section class="rubat-home-hero">
+  <div class="rubat-home-hero__media">
+    <img src="{{ '/assets/home/img/rubat_firstview.png' | relative_url }}"
+         alt="RUBAT Studio interface overview"
          class="rb-zoom"
-         onclick="rbOpen(this)"
-         style="width:100%; height:auto; display:block;" />
+         onclick="rbOpen(this)">
   </div>
 
-  <!-- Description below image -->
-  <div style="margin-top:1.5rem;">
-    <div style="font-size:0.95rem; letter-spacing:0.02em; color:rgba(147,197,253,1); font-weight:700;">Sounds and Senses Lab</div>
-    <div style="font-size:1.4rem; font-weight:800; line-height:1.25; margin-top:0.45rem;">
-      Live audio-visual monitoring & high-fidelity multichannel recording
-    </div>
-    <div style="margin-top:0.75rem; color:rgba(203,213,225,1); line-height:1.6; font-size:1.05rem;">
-      RUBAT Studio is a MATLAB-based recorder built for field bioacoustics — designed to capture high-sample-rate audio while giving you real-time heterodyne monitoring, responsive visualisation, and robust recording workflows.
-    </div>
-    <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:0.6rem;">
-      <span style="padding:0.3rem 0.7rem; border-radius:999px; background:rgba(59,130,246,0.18); border:1px solid rgba(59,130,246,0.35);">Flexible workflows</span>
-      <span style="padding:0.3rem 0.7rem; border-radius:999px; background:rgba(16,185,129,0.16); border:1px solid rgba(16,185,129,0.30);">Realtime monitoring</span>
-      <span style="padding:0.3rem 0.7rem; border-radius:999px; background:rgba(249,115,22,0.14); border:1px solid rgba(249,115,22,0.30);">Tap / Continuous / Auto</span>
-      <span style="padding:0.3rem 0.7rem; border-radius:999px; background:rgba(168,85,247,0.14); border:1px solid rgba(168,85,247,0.30);">Multichannel audio streams</span>
-      <span style="padding:0.3rem 0.7rem; border-radius:999px; background:rgba(247, 85, 134, 0.14); border:1px solid rgba(168,85,247,0.30);">Record ANY sound</span>
-    </div>
-  </div>
+  <div class="rubat-home-hero__copy">
+    <p class="eyebrow-label">Sounds and Senses Lab</p>
+    <h2>Live audio-visual monitoring and high-fidelity multichannel recording</h2>
+    <p>
+      RUBAT Studio is a MATLAB-based recorder for field bioacoustics and multichannel acquisition.
+      It pairs high-sample-rate capture with real-time heterodyne monitoring, responsive visualisation,
+      and robust recording workflows that feel at home within the BiosoniX family.
+    </p>
 
-</div>
+    <ul class="rubat-chip-list">
+      <li><span class="rubat-chip">Flexible workflows</span></li>
+      <li><span class="rubat-chip">Realtime monitoring</span></li>
+      <li><span class="rubat-chip">Tap / Continuous / Auto</span></li>
+      <li><span class="rubat-chip">Multichannel audio streams</span></li>
+      <li><span class="rubat-chip">Record any sound</span></li>
+    </ul>
+  </div>
+</section>
 
 ---
 
-<div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap; margin:1.5rem 0;">
-  <a href="https://github.com/raviumadi/RUBAT-Recorder/releases/download/R1.0/rubat_web_macos.zip"
-     style="position:relative; display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; min-width:240px; padding:0.85rem 1.8rem; font-size:1.05rem; font-weight:700; color:#fff; background:linear-gradient(135deg,#3b82f6,#15803d); border-radius:12px; text-decoration:none; box-shadow:0 4px 14px rgba(21,128,61,0.40), inset 0 1px 0 rgba(255,255,255,0.35); overflow:hidden; transition:transform 140ms ease, box-shadow 140ms ease;"
-     onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 22px rgba(21,128,61,0.50), inset 0 1px 0 rgba(255,255,255,0.40)';"
-     onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 14px rgba(21,128,61,0.40), inset 0 1px 0 rgba(255,255,255,0.35)';">
-    <span style="position:absolute; top:0; left:0; right:0; height:50%; background:linear-gradient(180deg,rgba(255,255,255,0.28),rgba(255,255,255,0)); border-radius:12px 12px 0 0; pointer-events:none;"></span>
-    ⬇ Download for macOS
-  </a>
-  <a href="https://github.com/raviumadi/RUBAT-Recorder/releases/download/R1.0/rubat_web_win64.exe.zip"
-     style="position:relative; display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; min-width:240px; padding:0.85rem 1.8rem; font-size:1.05rem; font-weight:700; color:#fff; background:linear-gradient(135deg,#3b82f6,#15803d); border-radius:12px; text-decoration:none; box-shadow:0 4px 14px rgba(21,128,61,0.40), inset 0 1px 0 rgba(255,255,255,0.35); overflow:hidden; transition:transform 140ms ease, box-shadow 140ms ease;"
-     onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 22px rgba(21,128,61,0.50), inset 0 1px 0 rgba(255,255,255,0.40)';"
-     onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 14px rgba(21,128,61,0.40), inset 0 1px 0 rgba(255,255,255,0.35)';">
-    <span style="position:absolute; top:0; left:0; right:0; height:50%; background:linear-gradient(180deg,rgba(255,255,255,0.28),rgba(255,255,255,0)); border-radius:12px 12px 0 0; pointer-events:none;"></span>
-    ⬇ Download for Windows
-  </a>
+<div class="rubat-action-row">
+  <a class="button-pill button-pill--primary" href="https://github.com/raviumadi/RUBAT-Recorder/releases/download/R1.0/rubat_web_macos.zip">⬇ Download for macOS</a>
+  <a class="button-pill button-pill--primary" href="https://github.com/raviumadi/RUBAT-Recorder/releases/download/R1.0/rubat_web_win64.exe.zip">⬇ Download for Windows</a>
 </div>
 
 ---
@@ -136,196 +64,111 @@ In short, RUBAT combines research-grade reliability with studio flexibility — 
 
 ---
 
-<div style="margin:1rem 0 1.25rem; padding:1rem 1.1rem; border-radius:14px; border:1px solid rgba(10, 45, 16, 0.8); background:rgba(13, 45, 6, 0.95);">
-  <div style="font-weight:900; color:rgba(147,197,253,1);">How to pronounce “RUBAT”</div>
-
-  <div style="margin-top:0.35rem; color:rgb(255, 255, 255); line-height:1.55;">
-    Say it like <b>“Rue-BAT”</b>.
-    <span style="opacity:0.95;">“Rue” rhymes with <b>“blue”</b> (like “roo”), then “bat”.</span>
-  </div>
-
-  <div style="margin-top:0.45rem; font-size:0.95rem; color:rgb(197, 94, 31);">
-    <b>Phonetic:</b>
-    <span style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;">ROO-bat</span>
-    &nbsp;·&nbsp;
-    <b>IPA:</b>
-    <span style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;">/ˈruː.bæt/</span>
-  </div>
-
-  <div style="margin-top:0.85rem;">
-    <audio controls style="width:100%; margin-top:0.25rem;">
-      <source src="{{ '/assets/home/audio/rubat_pronunciation.wav' | relative_url }}" type="audio/wav">
-      Your browser does not support the audio element.
-    </audio>
-    <div style="margin-top:0.6rem; font-size:0.85rem; color:rgba(51,65,85,0.95);"></div>
-  </div>
-</div>
+<section class="rubat-pronounce">
+  <h3>How to pronounce “RUBAT”</h3>
+  <p>
+    Say it like <strong>“Rue-BAT”</strong>. “Rue” rhymes with <strong>“blue”</strong>, then “bat”.
+  </p>
+  <p class="rubat-phonetics"><strong>Phonetic:</strong> <code>ROO-bat</code> · <strong>IPA:</strong> <code>/ˈruː.bæt/</code></p>
+  <audio controls>
+    <source src="{{ '/assets/home/audio/rubat_pronunciation.wav' | relative_url }}" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+</section>
 
 ---
 
 ## Key capabilities
 
-<div style="display:flex; flex-direction:column; gap:0.9rem; margin:1rem 0 0.25rem;">
-
-  <!-- 1 -->
-<div style="padding:1rem; border-radius:16px; border:1px solid rgba(226,232,240,0.18); background:linear-gradient(135deg, rgba(37,99,235,0.26), rgba(30,58,138,0.18)); color:rgba(15,23,42,1);">
-  <div style="overflow:hidden;">
-    <video muted loop playsinline
-    onmouseover="this.play()"
-       onmouseout="this.pause(); this.currentTime=0;"
-       style="float:right; width:45%; max-width:520px; height:auto; border-radius:12px; border:1px solid rgba(148,163,184,0.14); margin-left:1rem; margin-bottom:0.5rem;">
-  <source src="{{ '/assets/home/video/heterodyne.mp4' | relative_url }}" type="video/mp4">
-</video>
-    <div>
-      <div style="font-weight:900; font-size:1.05rem;">Continuous monitoring</div>
-      <div style="margin-top:0.45rem; line-height:1.6;">
-        Bat calls are shifted into the audible range by multiplying the signal against a sine carrier whose phase accumulates continuously across frames — no clicks or discontinuities at frame boundaries. Dial the carrier frequency across the full spectrum up to the Nyquist limit. Switch freely between <b>Off</b>, <b>Passthrough</b>, and <b>Heterodyne</b> while the stream is live, without restarting.
-      </div>
+<div class="rubat-feature-grid">
+  <article class="rubat-feature-card">
+    <div class="rubat-feature-card__media">
+      <video class="rubat-hover-video" muted loop playsinline>
+        <source src="{{ '/assets/home/video/heterodyne.mp4' | relative_url }}" type="video/mp4">
+      </video>
     </div>
-  </div>
-</div>
+    <h3>Continuous monitoring</h3>
+    <p>Shift bat calls into the audible range with continuously accumulated heterodyne phase, with no clicks or frame-boundary discontinuities. Switch freely between <strong>Off</strong>, <strong>Passthrough</strong>, and <strong>Heterodyne</strong> while the stream is live.</p>
+  </article>
 
-  <!-- 2 -->
-  <div style="padding:1rem; border-radius:16px; border:1px solid rgba(226,232,240,0.18); background:linear-gradient(135deg, rgba(59,130,246,0.24), rgba(29,78,216,0.16)); color:rgba(15,23,42,1);">
-    <div style="overflow:hidden;">
-      <video muted loop playsinline
-    onmouseover="this.play()"
-       onmouseout="this.pause(); this.currentTime=0;"
-       style="float:right; width:45%; max-width:520px; height:auto; border-radius:12px; border:1px solid rgba(148,163,184,0.14); margin-left:1rem; margin-bottom:0.5rem;">
-  <source src="{{ '/assets/home/video/feature_channels.mp4' | relative_url }}" type="video/mp4">
-</video>
-      <div>
-        <div style="font-weight:900; font-size:1.05rem; color:rgba(15,23,42,1);">True N-channel in → out routing</div>
-        <div style="color:rgba(30,41,59,0.95); margin-top:0.45rem; line-height:1.6;">
-          Each selected input channel is routed one-to-one to the matching physical output channel. A per-channel output mask gates which physical outputs carry audio; unselected outputs stay silent. <b>Mix mode</b> sums odd-indexed inputs to the left ear and even-indexed to the right, giving intuitive stereo headphone monitoring of a microphone array.
-        </div>
-      </div>
+  <article class="rubat-feature-card">
+    <div class="rubat-feature-card__media">
+      <video class="rubat-hover-video" muted loop playsinline>
+        <source src="{{ '/assets/home/video/feature_channels.mp4' | relative_url }}" type="video/mp4">
+      </video>
     </div>
-  </div>
+    <h3>True N-channel routing</h3>
+    <p>Each selected input channel can route one-to-one to matching physical outputs. A per-channel mask keeps monitoring predictable, while <strong>Mix mode</strong> gives intuitive left-right headphone monitoring of an array.</p>
+  </article>
 
-  <!-- 3 -->
-  <div style="padding:1rem; border-radius:16px; border:1px solid rgba(226,232,240,0.18); background:linear-gradient(135deg, rgba(56,189,248,0.22), rgba(14,116,144,0.16)); color:rgba(15,23,42,1);">
-    <div style="overflow:hidden;">
-      <video muted loop playsinline
-    onmouseover="this.play()"
-       onmouseout="this.pause(); this.currentTime=0;"
-       style="float:right; width:45%; max-width:520px; height:auto; border-radius:12px; border:1px solid rgba(148,163,184,0.14); margin-left:1rem; margin-bottom:0.5rem;">
-  <source src="{{ '/assets/home/video/feature_tap.mp4' | relative_url }}" type="video/mp4">
-</video>
-      <div>
-        <div style="font-weight:900; font-size:1.05rem; color:rgba(15,23,42,1);">Ring buffer tap — capture what just happened</div>
-        <div style="color:rgba(30,41,59,0.95); margin-top:0.45rem; line-height:1.6;">
-          A continuously-written ring buffer keeps the last N seconds of audio in memory at all times. Pressing <b>TAP</b> trims out a clip that starts <em>before</em> you pressed the button — set the <b>pre-trigger</b> window independently from the <b>post-trigger</b> window. You are never racing against a passing interesting event; you already have it.
-        </div>
-      </div>
+  <article class="rubat-feature-card">
+    <div class="rubat-feature-card__media">
+      <video class="rubat-hover-video" muted loop playsinline>
+        <source src="{{ '/assets/home/video/feature_tap.mp4' | relative_url }}" type="video/mp4">
+      </video>
     </div>
-  </div>
+    <h3>Ring buffer tap capture</h3>
+    <p>A continuously written buffer keeps the last N seconds of audio ready at all times. Press <strong>TAP</strong> to recover what happened just before the moment you reacted.</p>
+  </article>
 
-  <!-- 4 -->
-  <div style="padding:1rem; border-radius:16px; border:1px solid rgba(226,232,240,0.18); background:linear-gradient(135deg, rgba(34,211,238,0.20), rgba(13,148,136,0.16)); color:rgba(15,23,42,1);">
-    <div style="overflow:hidden;">
-      <video muted loop playsinline
-    onmouseover="this.play()"
-       onmouseout="this.pause(); this.currentTime=0;"
-       style="float:right; width:45%; max-width:520px; height:auto; border-radius:12px; border:1px solid rgba(148,163,184,0.14); margin-left:1rem; margin-bottom:0.5rem;">
-  <source src="{{ '/assets/home/video/feature_auto.mp4' | relative_url }}" type="video/mp4">
-</video>
-      <div>
-        <div style="font-weight:900; font-size:1.05rem; color:rgba(15,23,42,1);">Auto mode — unattended threshold recording</div>
-        <div style="color:rgba(30,41,59,0.95); margin-top:0.45rem; line-height:1.6;">
-          Arm <b>Auto</b> and walk away. Each time signal energy in the pre-trigger window crosses the threshold, RUBAT fires a tap automatically. No classifier required — a lightweight energy check is sufficient and adds negligible CPU overhead to the audio loop.
-        </div>
-      </div>
+  <article class="rubat-feature-card">
+    <div class="rubat-feature-card__media">
+      <video class="rubat-hover-video" muted loop playsinline>
+        <source src="{{ '/assets/home/video/feature_auto.mp4' | relative_url }}" type="video/mp4">
+      </video>
     </div>
-  </div>
+    <h3>Auto mode for unattended runs</h3>
+    <p>Arm <strong>Auto</strong> and let lightweight threshold detection fire retrospective tap captures on its own, ideal for long deployments and low-overhead field use.</p>
+  </article>
 
-  <!-- 5 -->
-  <div style="padding:1rem; border-radius:16px; border:1px solid rgba(226,232,240,0.18); background:linear-gradient(135deg, rgba(45,212,191,0.20), rgba(15,118,110,0.16)); color:rgba(15,23,42,1);">
-    <div style="overflow:hidden;">
-      <video muted loop playsinline
-    onmouseover="this.play()"
-       onmouseout="this.pause(); this.currentTime=0;"
-       style="float:right; width:45%; max-width:520px; height:auto; border-radius:12px; border:1px solid rgba(148,163,184,0.14); margin-left:1rem; margin-bottom:0.5rem;">
-  <source src="{{ '/assets/home/video/feature_spl.mp4' | relative_url }}" type="video/mp4">
-</video>
-      <div>
-        <div style="font-weight:900; font-size:1.05rem; color:rgba(15,23,42,1);">Calibrated dB SPL waveform display</div>
-        <div style="color:rgba(30,41,59,0.95); margin-top:0.45rem; line-height:1.6;">
-          Supply a <em>Pa-per-unit</em> sensitivity calibration factor and the live waveform panel switches to <b>dB SPL re 20 µPa</b> — quantitative and comparable across sessions and microphone models. Without calibration the display falls back to a relative dBFS view, so the panel is always informative regardless of setup.
-        </div>
-      </div>
+  <article class="rubat-feature-card">
+    <div class="rubat-feature-card__media">
+      <video class="rubat-hover-video" muted loop playsinline>
+        <source src="{{ '/assets/home/video/feature_spl.mp4' | relative_url }}" type="video/mp4">
+      </video>
     </div>
-  </div>
+    <h3>Calibrated waveform display</h3>
+    <p>Provide a sensitivity calibration factor and the waveform panel switches to <strong>dB SPL re 20 µPa</strong>. Without calibration, RUBAT still offers a reliable relative dBFS view.</p>
+  </article>
 
-  <!-- 6 -->
-  <div style="padding:1rem; border-radius:16px; border:1px solid rgba(226,232,240,0.18); background:linear-gradient(135deg, rgba(16,185,129,0.20), rgba(5,150,105,0.16)); color:rgba(15,23,42,1);">
-    <div style="overflow:hidden;">
-      <video muted loop playsinline
-    onmouseover="this.play()"
-       onmouseout="this.pause(); this.currentTime=0;"
-       style="float:right; width:45%; max-width:520px; height:auto; border-radius:12px; border:1px solid rgba(148,163,184,0.14); margin-left:1rem; margin-bottom:0.5rem;">
-  <source src="{{ '/assets/home/video/feature_spec.mp4' | relative_url }}" type="video/mp4">
-</video>
-      <div>
-        <div style="font-weight:900; font-size:1.05rem; color:rgba(15,23,42,1);">Dual greyscale spectrograms</div>
-        <div style="color:rgba(30,41,59,0.95); margin-top:0.45rem; line-height:1.6;">
-          Two independent spectrogram panes, each assignable to any selected input channel. Energy is mapped black&nbsp;→&nbsp;white on a dark background — maximum contrast for reading call structure in bright daylight or in the twilight. Set view via Y scaling in Hz at any time.
-        </div>
-      </div>
+  <article class="rubat-feature-card">
+    <div class="rubat-feature-card__media">
+      <video class="rubat-hover-video" muted loop playsinline>
+        <source src="{{ '/assets/home/video/feature_spec.mp4' | relative_url }}" type="video/mp4">
+      </video>
     </div>
-  </div>
+    <h3>Dual greyscale spectrograms</h3>
+    <p>Monitor two independently assigned channels with high-contrast spectrograms that remain readable outdoors, in twilight, or during rapid operator checks.</p>
+  </article>
 
-  <!-- 7 -->
-  <div style="padding:1rem; border-radius:16px; border:1px solid rgba(226,232,240,0.18); background:linear-gradient(135deg, rgba(34,197,94,0.20), rgba(22,163,74,0.16)); color:rgba(15,23,42,1);">
-    <div style="overflow:hidden;">
-      <video muted loop playsinline
-    onmouseover="this.play()"
-       onmouseout="this.pause(); this.currentTime=0;"
-       style="float:right; width:45%; max-width:520px; height:auto; border-radius:12px; border:1px solid rgba(148,163,184,0.14); margin-left:1rem; margin-bottom:0.5rem;">
-  <source src="{{ '/assets/home/video/feature_logging.mp4' | relative_url }}" type="video/mp4">
-</video>
-      <div>
-        <div style="font-weight:900; font-size:1.05rem; color:rgba(15,23,42,1);">Robust device handling &amp; logging</div>
-        <div style="color:rgba(30,41,59,0.95); margin-top:0.45rem; line-height:1.6;">
-          Input-Output channels count is querried and validated. Device and channel controls lock during streaming to prevent accidental re-probes. All events are written to a live log.
-        </div>
-      </div>
+  <article class="rubat-feature-card">
+    <div class="rubat-feature-card__media">
+      <video class="rubat-hover-video" muted loop playsinline>
+        <source src="{{ '/assets/home/video/feature_logging.mp4' | relative_url }}" type="video/mp4">
+      </video>
     </div>
-  </div>
+    <h3>Robust device handling</h3>
+    <p>Input-output channel counts are queried and validated, device controls lock during streaming, and the application writes events to a live log for reliable troubleshooting.</p>
+  </article>
 
-  <!-- 8 -->
-  <div style="padding:1rem; border-radius:16px; border:1px solid rgba(226,232,240,0.18); background:linear-gradient(135deg, rgba(74,222,128,0.18), rgba(21,128,61,0.16)); color:rgba(15,23,42,1);">
-    <div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap;">
-      <div style="flex:1; min-width:260px;">
-        <div style="font-weight:900; font-size:1.05rem; color:rgba(15,23,42,1);">Three recording modes + keyboard shortcuts</div>
-        <div style="color:rgba(30,41,59,0.95); margin-top:0.45rem; line-height:1.6;">
-          <b>✓ Tap</b> — single pre+post clip from the ring buffer, triggered manually.<br>
-          <b>✓ Continuous</b> — streams directly to a sequentially-numbered WAV file until you stop.<br>
-          <b>✓ Auto</b> — arms Tap so the detector fires it for you unattended.<br>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <article class="rubat-feature-card">
+    <h3>Three recording modes</h3>
+    <p><strong>Tap</strong> captures a retrospective clip, <strong>Continuous</strong> streams directly to disk, and <strong>Auto</strong> arms threshold-based triggers. Keyboard shortcuts keep the workflow fast once you are in the field.</p>
+  </article>
 </div>
 
 ---
 
 ## Example recording
 
-<div style="margin:1.25rem 0; padding:1.25rem; border-radius:14px; background:linear-gradient(135deg,#0b1220,#111827); color:#e5e7eb; box-shadow:0 10px 24px rgba(0,0,0,0.25);">
-  <div style="min-width:240px; margin-bottom:0.75rem;">
-    <div style="font-size:0.95rem; color:#93c5fd; font-weight:700;">Field testing</div>
-    <div style="font-size:1.15rem; font-weight:800; margin-top:0.25rem;">Two-channel recording</div>
-  </div>
-  <div style="border-radius:12px; overflow:hidden; border:1px solid rgba(148,163,184,0.14);">
-    <video controls id="fieldVideo" style="width:100%; display:block;">
-      <source src="{{ '/assets/home/video/spectrogram_video_20260227_133734_147.mp4' | relative_url }}" type="video/mp4">
-      Your browser does not support the video element.
-    </video>
-    <script>document.getElementById('fieldVideo').volume = 0.5;</script>
-  </div>
-</div>
+<section class="rubat-example">
+  <p class="eyebrow-label">Field testing</p>
+  <h3>Two-channel example recording</h3>
+  <video controls id="fieldVideo">
+    <source src="{{ '/assets/home/video/spectrogram_video_20260227_133734_147.mp4' | relative_url }}" type="video/mp4">
+    Your browser does not support the video element.
+  </video>
+</section>
 
 ---
 
@@ -345,42 +188,25 @@ In short, RUBAT combines research-grade reliability with studio flexibility — 
 
 ## Get started
 
-<div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:0.75rem; margin:0.75rem 0 0.25rem;">
-  <a href="{{ '/download/' | relative_url }}" style="text-decoration:none;">
-    <div style="padding:0.95rem; border-radius:14px; border:1px solid rgba(148,163,184,0.18); background:rgba(2,6,23,0.03);">
-      <div style="font-weight:800; color:#0f172a;">⬇️ Download</div>
-      <div style="margin-top:0.35rem; color:#475569; line-height:1.45;">Get the software package. As always, the application is free.</div>
-    </div>
-  </a>
-  <a href="{{ '/install/' | relative_url }}" style="text-decoration:none;">
-    <div style="padding:0.95rem; border-radius:14px; border:1px solid rgba(148,163,184,0.18); background:rgba(2,6,23,0.03);">
-      <div style="font-weight:800; color:#0f172a;">📦 Install</div>
-      <div style="margin-top:0.35rem; color:#475569; line-height:1.45;">MATLAB Runtime / packaged app install, and setup.</div>
-    </div>
-  </a>
-  <a href="{{ '/quickstart/' | relative_url }}" style="text-decoration:none;">
-    <div style="padding:0.95rem; border-radius:14px; border:1px solid rgba(148,163,184,0.18); background:rgba(2,6,23,0.03);">
-      <div style="font-weight:800; color:#0f172a;">🚀 Quickstart Guide</div>
-      <div style="margin-top:0.35rem; color:#475569; line-height:1.45;">Set up the tool and get to your first recording and start collecting data!</div>
-    </div>
-  </a>
-  <a href="{{ '/tips/' | relative_url }}" style="text-decoration:none;">
-    <div style="padding:0.95rem; border-radius:14px; border:1px solid rgba(148,163,184,0.18); background:rgba(2,6,23,0.03);">
-      <div style="font-weight:800; color:#0f172a;">💡 Tips & Best Practices</div>
-      <div style="margin-top:0.35rem; color:#475569; line-height:1.45;">Practical guide to avoiding common mistakes and becoming a bioacoustic field champ!</div>
-    </div>
-  </a>
+<div class="rubat-quick-links">
+  <a class="rubat-link-card" href="{{ '/download/' | relative_url }}"><strong>⬇ Download</strong><span>Get the software package. The application is free to use.</span></a>
+  <a class="rubat-link-card" href="{{ '/install/' | relative_url }}"><strong>📦 Install</strong><span>MATLAB Runtime or packaged app installation and setup notes.</span></a>
+  <a class="rubat-link-card" href="{{ '/quickstart/' | relative_url }}"><strong>🚀 Quickstart</strong><span>Move from installation to your first recording session quickly.</span></a>
+  <a class="rubat-link-card" href="{{ '/tips/' | relative_url }}"><strong>💡 Tips &amp; best practices</strong><span>A practical guide to more reliable field and studio workflows.</span></a>
 </div>
 
 ---
 
 ## Open science
 
-RUBAT Studio is developed with an open-science mindset:
-
-- transparent, reproducible signal-processing choices
-- clear documentation of acquisition parameters
-- a workflow designed to be shared, reviewed, and extended
+<section class="rubat-open-science">
+  <p>RUBAT Studio is developed with an open-science mindset:</p>
+  <ul>
+    <li>transparent, reproducible signal-processing choices</li>
+    <li>clear documentation of acquisition parameters</li>
+    <li>a workflow designed to be shared, reviewed, and extended</li>
+  </ul>
+</section>
 
 
 <!-- Lightbox Modal (shared by all images on this page) -->
@@ -391,6 +217,22 @@ RUBAT Studio is developed with an open-science mindset:
 </div>
 
 <script>
+  document.querySelectorAll('.rubat-hover-video').forEach(function (video) {
+    video.addEventListener('mouseenter', function () {
+      video.play();
+    });
+
+    video.addEventListener('mouseleave', function () {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+
+  var fieldVideo = document.getElementById('fieldVideo');
+  if (fieldVideo) {
+    fieldVideo.volume = 0.5;
+  }
+
   function rbOpen(img){
     var modal = document.getElementById("rbModal");
     var modalImg = document.getElementById("rbModalImg");

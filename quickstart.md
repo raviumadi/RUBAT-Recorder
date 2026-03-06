@@ -9,10 +9,10 @@ nav_order: 3
   .qs-figure{
     margin: 1.5rem 0 1.75rem;
     padding: 1rem;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid var(--line);
     border-radius: 14px;
-    background: rgba(255,255,255,0.03);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    background: color-mix(in srgb, var(--surface-soft) 92%, transparent);
+    box-shadow: var(--shadow-soft);
   }
 
   .qs-img{
@@ -20,14 +20,14 @@ nav_order: 3
     width:100%;
     height:auto;
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid var(--line);
     cursor: zoom-in;
     transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
   }
 
   .qs-img:hover{
     transform: translateY(-2px);
-    border-color: rgba(255,255,255,0.18);
+    border-color: color-mix(in srgb, var(--accent) 32%, var(--line));
     box-shadow: 0 14px 28px rgba(0,0,0,0.28);
   }
 
@@ -35,7 +35,7 @@ nav_order: 3
     margin-top: 0.75rem;
     font-size: 0.95rem;
     text-align: center;
-    color: rgb(0,0,0);
+    color: var(--muted);
   }
 
   /* Lightbox Modal */

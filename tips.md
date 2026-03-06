@@ -11,7 +11,7 @@ nav_order: 5
   margin: 1.2rem 0;
   border-radius: 10px;
   border-left: 6px solid;
-  background: #f8f9fb;
+  background: color-mix(in srgb, var(--surface-soft) 92%, transparent);
 }
 .callout h4 {
   margin-top: 0;
@@ -19,15 +19,15 @@ nav_order: 5
 }
 .callout.safety {
   border-color: #e63946;
-  background: #fff5f5;
+  background: color-mix(in srgb, #e63946 12%, var(--surface-soft));
 }
 .callout.pro {
   border-color: #2a9d8f;
-  background: #f1fbf9;
+  background: color-mix(in srgb, #2a9d8f 12%, var(--surface-soft));
 }
 .callout.trouble {
   border-color: #f4a261;
-  background: #fff8f1;
+  background: color-mix(in srgb, #f4a261 12%, var(--surface-soft));
 }
 </style>
 

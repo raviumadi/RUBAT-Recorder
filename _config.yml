@@ -4,7 +4,7 @@ remote_theme: pages-themes/cayman@v0.2.0
 
 # Find the theme documentation here --> https://github.com/pages-themes/cayman
 
-url: "https://biosonix.io"
+url: "https://rubat.biosonix.io"
 baseurl: ""   # IMPORTANT: must match your repo name exactly
 permalink: pretty
 
@@ -56,8 +56,8 @@ back_to_top_text: "Back to top"
 gh_edit_link: true
 gh_edit_link_text: "Edit this page on GitHub"
 gh_edit_repository: "https://github.com/raviumadi/RUBAT-Recorder" # Update this
-gh_edit_branch: "main"
-gh_edit_source: "docs"
+gh_edit_branch: "gh-pages"
+gh_edit_source: ""
 gh_edit_view_mode: "tree"
 
 # Keep it simple, only necessary plugins
